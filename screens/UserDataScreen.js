@@ -25,7 +25,7 @@ const UserDataScreen = ({ navigation }) => {
   }, []);
 
   const handleLogout = () => {
-    // Navigate to the Login screen
+    
     navigation.navigate('Login');
   };
 

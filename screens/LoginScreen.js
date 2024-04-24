@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import { View, TextInput, TouchableOpacity, Text, Alert } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import React, { useState } from 'react';
+import { Alert, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleLogin = async () => {
-    // Basic validation
+    
     if (!email || !password) {
       Alert.alert('Error', 'Please fill in all required fields');
       return;
@@ -25,7 +25,7 @@ const LoginScreen = ({ navigation }) => {
 
       // Check if email and password match stored user data
       if (email === userData.email && password === userData.password) {
-        // Navigate to UserData screen after successful login
+      // Navigate to UserData screen after successful login
         navigation.navigate('UserData');
       } else {
         Alert.alert('Error', 'Invalid email or password');

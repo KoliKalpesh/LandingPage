@@ -11,14 +11,14 @@ const RegisterScreen = ({ navigation }) => {
   const [isAgency, setIsAgency] = useState(false);
 
   const handleRegister = async () => {
-    // Basic validation
+    
     if (!fullName || !email || !password) {
       Alert.alert('Error', 'Please fill in all required fields');
       return;
     }
 
     try {
-      // Save user data to AsyncStorage
+      // Saving user data to AsyncStorage
       const userData = {
         fullName,
         phoneNumber,
